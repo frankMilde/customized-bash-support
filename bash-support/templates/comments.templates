@@ -21,7 +21,7 @@
 #
 #          FILE:  |FILENAME|
 # 
-#   DESCRIPTION:  |CURSOR|
+#   DESCRIPTION:  <CURSOR>
 # 
 #       OPTIONS:  ---
 #  REQUIREMENTS:  ---
@@ -43,7 +43,15 @@
 
 #!/bin/bash
 
-set -o nounset                           # Treat unset variables as an error
+# Enforce Bash strict mode, see
+# 'http://redsymbol.net/articles/unofficial-bash-strict-mode/'
+set -e          # exit if any command [1] has a non-zero exit status
+set -u          # a reference to any variable you havent previously defined
+                # - with the exceptions of $* and $@ - is an error
+set -o pipefail # prevents errors in a pipeline from being masked.
+set -o nounset  # Treat unset variables as an error
+IFS=$'\n\t'     # meaning full Internal Field Separator - controls what Bash     calls word
+                # splitting
 
 <++>
 
@@ -68,7 +76,7 @@ set -o nounset                           # Treat unset variables as an error
 #===  FUNCTION  ============================================================
 #          NAME:  main
 #   DESCRIPTION:  Runs all functions.
-#       GLOBALS:  <++>
+#       GLOBALS:  <CURSOR>
 #     ARGUMENTS:  <++> 
 #       RETURNS:  <++> 
 #===========================================================================

@@ -166,13 +166,13 @@ vnoremap { s{}<Esc>P
 "-------------------------------------------------------------------------------
 " autocomplete quotes
 "-------------------------------------------------------------------------------
-vnoremap  '  s''<Esc>P<Right>
-vnoremap  "  s""<Esc>P<Right>
-vnoremap  `  s``<Esc>P<Right>
-"
-inoremap	'  '<Esc>:call QuoteInsertionWrapper("'")<CR>a
-inoremap	"  "<Esc>:call QuoteInsertionWrapper('"')<CR>a
-inoremap	`  `<Esc>:call QuoteInsertionWrapper('`')<CR>a
+"vnoremap  '  s''<Esc>P<Right>
+"vnoremap  "  s""<Esc>P<Right>
+"vnoremap  `  s``<Esc>P<Right>
+""
+"inoremap	'  '<Esc>:call QuoteInsertionWrapper("'")<CR>a
+"inoremap	"  "<Esc>:call QuoteInsertionWrapper('"')<CR>a
+"inoremap	`  `<Esc>:call QuoteInsertionWrapper('`')<CR>a
 "
 "-------------------------------------------------------------------------------
 " function QuoteInsertionWrapper			{{{3

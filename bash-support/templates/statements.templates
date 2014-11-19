@@ -5,25 +5,28 @@
 == Statements.case == map:sc, shortcut:c  ==
 case <CURSOR> in
 	)
+		<++>
 	;;
 
 	)
+		<++>
 	;;
 
 	*)
+		<++>
 	;;
 
-esac    # ----- end of case -----
+esac  # -----  end of case -----
 == Statements.elif == map:sei, shortcut:e  ==
 elif <CURSOR> ; then
 == Statements.for-in == map:sf, shortcut:f  ==
 for <CURSOR> in ; do
 <SPLIT><-LOOP_BODY->
-done
+done  # -----  end of for  -----
 == Statements.for == map:sfo, shortcut:f  ==
 for (( CNTR=0; CNTR<<CURSOR>0; CNTR+=1 )); do
 <SPLIT><-LOOP_BODY->
-done
+done  # -----  end of for  -----
 == Statements.if == map:si, shortcut:i  ==
 if <CURSOR> ; then
 <SPLIT><-IF_PART->
@@ -36,18 +39,17 @@ else
 fi
 == Statements.select == map:ss, shortcut:s  ==
 select <CURSOR> in ; do
-<SPLIT>done
+<SPLIT>done  # -----  end of select  -----
 == Statements.until == map:su, shortcut:u  ==
 until <CURSOR> ; do
-<SPLIT>done
+<SPLIT>done  # -----  end of until  -----
 == Statements.while == map:sw, shortcut:w  ==
 while <CURSOR> ; do
-<SPLIT>done
+<SPLIT>done  # -----  end of while  -----
 == Statements.function == map:sfu, shortcut:f  ==
-|?FUNCTION_NAME| ()
-{
-<CURSOR><SPLIT>
-}	# ----- end of function |FUNCTION_NAME|  -----
+function |?FUNCTION_NAME| () {
+<CURSOR>
+}  # -----  end of function |FUNCTION_NAME|  -----
 == ENDTEMPLATE ==
 
 § -------------------------------------------------------------
